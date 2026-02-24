@@ -250,7 +250,7 @@ local SaveManager = {} do
 			Options.SaveManager_ConfigList:SetValues(self:RefreshConfigList())
 			Options.SaveManager_ConfigList:SetValue(nil)
 		end)
-
+--[[
 		section:AddButton('Set as autoload', function()
 			local name = Options.SaveManager_ConfigList.Value
 			writefile(self.Folder .. '/settings/autoload.txt', name)
@@ -264,7 +264,7 @@ local SaveManager = {} do
 			local name = readfile(self.Folder .. '/settings/autoload.txt')
 			SaveManager.AutoloadLabel:SetText('' .. name)
 		end
-
+]]
 		SaveManager:SetIgnoreIndexes({ 'SaveManager_ConfigList', 'SaveManager_ConfigName' })
 	end
 
